@@ -1,4 +1,4 @@
-Qtum Core 0.18.0 Mandatory Recommended Update
+3 Qtum Core 0.18.0 Mandatory Recommended Update
   qtum-neil released this 2 hours ago
 
 Adding bitcoin 0.18 functionality, staking fix for Testnet, other bug fixes [very brief synopsis of the update]
