@@ -5,7 +5,8 @@ Adding bitcoin 0.18 functionality, staking fix for Testnet, other bug fixes [ver
 
 Release notes (link to release notes Update History page)
 
-Pre-built download page, for primary platforms (link to https://qtumeco.io/wallet) [add download instruction links there]. All versions (link to full list with Hash Validation and Assets)
+Pre-built download page, for primary platforms https://qtumeco.io/wallet)
+All versions (link to full list on GitHubwith Hash Validation and Assets)
 
 Qtum introduction, documentation links, developer tools and process, building and testing https://github.com/qtumproject/qtum#what-is-qtum
 
