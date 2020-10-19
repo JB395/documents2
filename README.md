@@ -23,7 +23,7 @@ This Qtum Improvement Proposal (QIP) describes changes in blockchain parameters 
 
 From launch, Qtum has used a target block spacing (a configuration parameter) of 128 seconds. Target and difficulty are adjusted for every block to maintain the average 128 seconds block spacing, with considerable variance due to the randomness needed for decentralized consensus.
 
-This proposal would change parameters and perhaps other logic, to reduce the average block spacing to 16 seconds if this gives good results after testing/tuning, or perhaps 32 seconds. The consensus algorithm currently evaluates every UTXO at 16-second intervals, targeting a solution (publishing a block) after 8 intervals, or 128 seconds. A block could be published after the first interval (in 16 seconds) or occasionally, long after the target of 8 intervals.
+This proposal would change parameters and perhaps other logic, to reduce the average block spacing to 16 seconds if there are good results after testing/tuning, or perhaps 32 seconds. The consensus algorithm currently evaluates every UTXO at 16-second intervals, targeting a solution (publishing a block) after 8 intervals, or 128 seconds. A block could be published after the first interval (in 16 seconds) or occasionally, long after the target of 8 intervals.
 
 New block headers and new blocks can be proposed continuously on the network, but consensus logic validates with a 16-second granularity, meaning blocks are validated and time-stamped with 16-second granularity according to the interval spacing.
 
@@ -41,8 +41,7 @@ The high-level design goals for reduced block spacing are:
 * Adjust block size to maintain TPS (Transactions Per Second) and max gas per block.
 * Adjust the subsidy, the new QTUM that is created for each block as part of the block reward. This would likely be the current subsidy (4.0 QTUM) divided by “spacing improvement” (128 / 16 = 8), or 0.5 QTUM (for 16-second blocks). This keeps the overall inflation rate the same.
 * Decrease maturity, if testing confirms, for faster Coinstake spending (block rewards) and faster gas refunds.
-* With a faster cadence of intervals, nodes with slower processors, especially if they are staking large UTXO sets (> 1,000 UTXOs) may not be able to keep up and publish blocks.
-
+* With a faster cadence of intervals, nodes with slower processors, disk read/write or memory, especially if they are staking large UTXO sets (> 1,000 UTXOs) may not be able to keep up and publish blocks.
 
 ### TPS and Block Size ###
 
@@ -77,7 +76,7 @@ Reducing block spacing requires block parameters and logic changes, the updated 
 The following features are nongoals, and will not be provided in this QIP.
 
 * Increase TPS or make any changes to Distributed Governance Protocol, which will continue in effect.
-* Preserve hardware compatibility with all lower-powered nodes, especially if they are staking large UTXO sets. Some slower node platforms may be sunset.
+* Preserve hardware compatibility with all lower-powered nodes, especially if they are staking large UTXO sets. Subject to testing, some nodes with slower CPUs, disk read/write speed, or memory speed may be sunset.
 
 ## Acknowledgments ##
 
