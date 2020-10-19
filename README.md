@@ -90,4 +90,4 @@ The author would like to thank the Qtum Chain Foundation leadership and core dev
 
 ## Copyright ##
 
-Qtum and this QIP are licensed under GNU General Public License v3.
+Qtum Chain and this QIP are licensed under GNU General Public License v3.
