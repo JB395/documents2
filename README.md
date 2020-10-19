@@ -53,7 +53,7 @@ The current block size of 2 million bytes may be adjusted by current block size 
 
 The histogram of block spacings follows a curve controlled by the target adjustment algorithm giving the most spacings in the first interval, 2nd most in the second interval, etc. The standard histogram looks like this:
 
- 
+![Spacing Distribution for GitHub](https://user-images.githubusercontent.com/29760787/96398921-05369b80-119b-11eb-96ba-8b10dd2567fb.jpg) 
 
 It may be possible to “groom” the use of early intervals, while maintaining the expected average block spacing, using various logic modifications, to have a smoother and more uniform distribution of spacings for the early intervals. Perhaps there could be a “hold off” to prohibit the use of the first interval, etc. This is a stretch goal for reduced block spacing. 
 
@@ -80,7 +80,7 @@ The following features are nongoals, and will not be provided in this QIP.
 
 ## Acknowledgments ##
 
-The author would like to thank the Qtum Chain Foundation leadership and core developer team for their strategy and design of reduced block spacing.
+The author would like to thank the Qtum Chain Foundation leadership and core developer team for their strategy and architectural design of reduced block spacing.
 
 ## References ##
 
