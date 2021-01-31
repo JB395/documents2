@@ -18,7 +18,9 @@ The proof of delegation ("PoD") is a compact 65 byte signature made by the *dele
 
 *sha256d(staker{hexpubkeyhash})*
 
-i.e., equivalent to a message signed using the *signmessage* RPC call in Qtum.  Note that the *staker_{pubkeyhash}* should be hex-encoded and is therefore 40 bytes.
+i.e., equivalent to a message signed using the *signmessage* RPC call in Qtum.  Note that the *staker{pubkeyhash}* should be hex-encoded and is therefore 40 bytes.
+
+The message signed is shown in the script below as `sha256d("\x15Qtum signed message:\n\x28"+staker{hexpubkeyhash})` where `\x15` hexadecimal represents 21 decimal ASCII characters "Qtum signed message:" plus the newline character 0x0A. These characters are concatinated with `\28` hexadecimal or 40 decimal characters of the staker hexpubkeyhash.
 
 ##### Offline staking contract address
 
@@ -40,7 +42,7 @@ The delegator selects their address they want to delegate to a staker, the "*del
 
 The delegator selects a staker to that will be allowed to submit blocks by staking using the *delegation*'s utxos: the "*staker*".
 
-The delegator creates a PoD by signing the *staker{hexpubkeyhash}* using the *delegation_{privkey}*.
+The delegator creates a PoD by signing the *staker{hexpubkeyhash}* using the *delegation{privkey}*.
 
 
 The delegator creates a transaction that has one OP_CALL txout that executes the *addDelegation* function of the offline staking contract. The transaction sender must be the *delegation* address. The sender (e.g., the first vin prevout's address of the transaction) must be from the *delegation* address. The output that calls the *addDelegation* function should contain the following contract calldata:   
@@ -89,7 +91,7 @@ See appendix for a full example transaction.
 
 After the transaction that calls *addDelegation* has been confirmed, the *staker* is able to stake blocks on behalf of *delegation*. To find new blocks, the *staker* iterates over all *delegation* utxos with an **unused** *depth > 500* (i.e., they must be confirmed more than 500 blocks as well as unused for staking for the last 500 blocks), checking whether the following condition is true:
 
-*sha256d(modifier + utxo{blocktime} + utxo{hash} + utxo_{vout} + block_{time}) <= target * utxo{value}*
+*sha256d(modifier + utxo{blocktime} + utxo{hash} + utxo{vout} + block{time}) <= target * utxo{value}*
 
 i.e., the exact same process as normal PoS blocks in Qtum, except that the utxos here are the *delegation*'s utxos and not the *staker*'s. Upon finding a valid block, a staker follows the normal procedures for constructing a Qtum PoS block. Once the block has been constructing and the *staker* wishes to sign the block, they should create a compact signature on the following message using *staker{privkey}*:
 
@@ -122,7 +124,7 @@ For example, for a delegated PoS block with a *delegation{pubkeyhash} = 0x400870
 | 4    | bits                 | uint32_t  | The difficulty of this block.                                |
 | 4    | nonce                | uint32_t  | A nonce, unused in PoS blocks and therefore usually set to 0. |
 | 32   | state_root           | char[32]  | The root of the state trie                                   |
-| 32   | utxo_root            | char[32]  | ...                                                          |
+| 32   | utxo_root            | char[32]  | The root of the contract utxo balances trie.                 |
 | 32   | stake_prevout_hash   | char[32]  | The delegated staking utxo's hash                            |
 | 4    | staking_prevout_vout | uint32_t  | The delegated staking utxo's vout index                      |
 | 131  | blockSig             | varlength | The block's signature created by the staker concatenated with the PoD created by the delegator during delegation. Note that the field will be prefixed by a 0x82 byte specifying the length. |
