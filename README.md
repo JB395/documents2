@@ -20,9 +20,9 @@ Aside from the mandatory update before the hard fork, users should update as soo
 
 With the hard fork, average block spacing will be reduced from 128 seconds to 32 seconds, meaning the blockchain will be running four times faster. Even with the new staker, we recommend the following minimum specs for stakers:
 
-**Staking > 4,000 UTXOs** (own UTXOs or delegated UTXOs) at least 4 cores and 8 GB RAM
-**Staking > 8,000 UTXOs** (own UTXOs or delegated UTXOs) at least 8 cores and 24 GB RAM
-**Smaller stakers** may use 1 or 2 cores and 4 GB RAM. Under 1 GB RAM must use swap file.
+* **Staking > 4,000 UTXOs** (own UTXOs or delegated UTXOs) at least 4 cores and 8 GB RAM
+* **Staking > 8,000 UTXOs** (own UTXOs or delegated UTXOs) at least 8 cores and 24 GB RAM
+* **Smaller stakers** may use 1 or 2 cores and 4 GB RAM. Under 1 GB RAM must use swap file.
 
 ##### 2,000 Block Maturity
 
