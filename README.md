@@ -6,7 +6,7 @@ The intended audience for these recommendations is users of Qtum Core, the qtumd
 
 ##### Qtum Core version 0.20.2
 
-Qtum Core version 0.20.2 “FastLane” was released on March 20, 2012, and is available for download at https://github.com/qtumproject/qtum/releases. Version 0.20.2 is a mandatory update with a hard fork to implement new features, primarily 32-second block spacing:
+Qtum Core version 0.20.2 “FastLane” was released on March 20, 2012, and is available for download at https://github.com/qtumproject/qtum/releases. Version 0.20.2 is a **MANDITORY UPDATE** with a hard fork to implement new features, primarily 32-second block spacing:
 
 * Testnet block 806,600 on March 26, 2021
 
