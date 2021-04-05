@@ -33,8 +33,7 @@ With the hard fork to 32-second blocks, maturity for staking will change from 50
 Core wallets should startup for v0.20.1 with the same configuration file or startup parameters as version 0.20.1. For example, and standard super staker startup command would be 
 
 ```
-./qtumd -superstaking -stakingminfee=10 -stakingminutxovalue=100
-```
+./qtumd -superstaking -stakingminfee=10 -stakingminutxovalue=100```
  
 #### Implications for Super Stakers
 
