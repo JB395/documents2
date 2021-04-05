@@ -64,7 +64,7 @@ Returns the options that Qtum Core was started with, for example, a qtumd super 
   "wallet": ""
 }
 ```
- 
+
 **gettransactionreceipt** – adds bloom filter data
 
 Adds bloom filter to the gettransactionreceipt response, for light clients to quickly retrieve related logs.
