@@ -9,6 +9,7 @@ The intended audience for these recommendations is users of Qtum Core, the qtumd
 Qtum Core version 0.20.2 “FastLane” was released on March 20, 2012, and is available for download at https://github.com/qtumproject/qtum/releases. Version 0.20.2 is a mandatory update with a hard fork to implement new features, primarily 32-second block spacing:
 
 * Testnet block 806,600 on March 26, 2021
+
 * Mainnet block 845,000 approximately April 30, 2021
 
 Any Qtum Core wallets that do not update before the hard fork will be disconnected from the Qtum network and unable to make transactions or staking with Qtum mainnet. There is no new coin created by the hard fork and this update only applies to the Qtum Core wallets qtumd and Qtum-Qt.
