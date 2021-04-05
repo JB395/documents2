@@ -1,10 +1,10 @@
 ## Qtum Core v0.20.2 Recommendations – 2021-04-05
 
-##### Intended Audience
+#### Intended Audience
 
 The intended audience for these recommendations is users of Qtum Core, the qtumd and Qtum-Qt full node wallets, who are using the Qtum node for staking or staking services (super staker), or other high-performance applications such as hot wallets or nodes supporting light wallets.
 
-##### Qtum Core version 0.20.2
+#### Qtum Core version 0.20.2
 
 Qtum Core version 0.20.2 “FastLane” was released on March 20, 2012, and is available for download at https://github.com/qtumproject/qtum/releases. Version 0.20.2 is a **MANDITORY UPDATE** with a hard fork to implement new features, primarily 32-second block spacing:
 
@@ -14,7 +14,7 @@ Qtum Core version 0.20.2 “FastLane” was released on March 20, 2012, and is a
 
 Any Qtum Core wallets that do not update before the hard fork will be disconnected from the Qtum network and unable to make transactions or staking with Qtum mainnet. There is no new coin created by the hard fork and this update only applies to the Qtum Core wallets qtumd and Qtum-Qt.
 
-##### Update Now
+#### Update Now
 
 Aside from the mandatory update before the hard fork, users should update as soon as possible to gain the advantages of the more efficient multi-threaded staker in version 0.20.2. Efficiency improvements and the multi-thread staker can give reductions in CPU utilization by an order of magnitude, or more. This new staker is especially beneficial to large wallets that are staking with UTXO sets > 5,000.
 
@@ -24,11 +24,11 @@ With the hard fork, average block spacing will be reduced from 128 seconds to 32
 * **Staking > 8,000 UTXOs** (own UTXOs or delegated UTXOs) at least 8 cores and 24 GB RAM
 * **Smaller stakers** may use 1 or 2 cores and 4 GB RAM. Under 1 GB RAM must use swap file.
 
-##### 2,000 Block Maturity
+#### 2,000 Block Maturity
 
 With the hard fork to 32-second blocks, maturity for staking will change from 500 blocks – about 18 hours (currently) to 2,000 blocks – about 18 hours. Commercial applications (exchanges and wallets) should make a similar adjustment in “confirmations”, for example, if a service currently requires 20 confirmations for receiving QTUM in an account, after the hard fork this should change to 80 confirmations (e.g., 4 times the current confirmations). This will keep the time required for confirmations the same. Sometime after the mainnet hard fork, Qtum will report if it is allowable to reduce the number of confirmations.
 
-##### Same Configuration and Startup Parameters
+#### Same Configuration and Startup Parameters
 
 Core wallets should startup for v0.20.1 with the same configuration file or startup parameters as version 0.20.1. For example, and standard super staker startup command would be 
 
@@ -36,13 +36,13 @@ Core wallets should startup for v0.20.1 with the same configuration file or star
 ./qtumd -superstaking -stakingminfee=10 -stakingminutxovalue=100
 ```
  
-##### Implications for Super Stakers
+#### Implications for Super Stakers
 
 After the hard fork staking maturity will change to 2,000 blocks. This means that staked UTXOs will mature after 2001 blocks. Some mid-sized super stakers may need to add UTXOs for staking as follows. The staked amount compared to the total amount for a super staker should not rise higher than 65% to 70% (except for highly-controlled cases). After the hard fork, with blocks (and block rewards) arriving 4 times faster this means a staker that is averaging many stakes during the maturity period will see their number of stakes increase 4 times. If this would push their percent of staked to total beyond the 65% to 70% range, they should add 100 QTUM-sized UTXOs. Here are some examples:
 
  ![3  Table Before and After](https://user-images.githubusercontent.com/29760787/113584906-7fe45d80-95f9-11eb-902b-83e4001ce0fe.jpg)
 
-##### Qtum v0.20.2 New PRC Calls and Startup Parameters
+#### Qtum v0.20.2 New PRC Calls and Startup Parameters
 
 There are some new PRC calls and startup parameters for v0.20.2.
 
