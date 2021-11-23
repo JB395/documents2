@@ -13,7 +13,7 @@ Setup for sideloading with these steps, which are given in more detail in the Ap
 
 # Address Delegation with Ledger
 
-Qtum offline staking address delegation works with Qtum legacy "Q" addresses only. If your Ledger holds QTUM in a SegWit "M" address, create a Qtum legacy "Q" address on the Ledger, send the QTUM to this address, and then delegate from this address. For more information about Qtum legacy addresses on Ledger see the note "Qtum address formats" at [Ledger Docs – Qtum](https://support.ledger.com/hc/en-us/articles/115003776913-Qtum-QTUM-?docs=true).For larger wallets (> 5k QTUM) delegate address UTXOs should be "split" into 100 QTUM sizes [Reference 3].
+Qtum offline staking address delegation works with Qtum legacy "Q" addresses only. If your Ledger holds QTUM in a SegWit "M" address, create a Qtum legacy "Q" address on the Ledger, send the QTUM to this address, and then delegate from this address. For more information about Qtum legacy addresses on Ledger see the note "Qtum address formats" at [Ledger Docs â€“ Qtum](https://support.ledger.com/hc/en-us/articles/115003776913-Qtum-QTUM-?docs=true). For larger wallets (> 5k QTUM) delegate address UTXOs should be "split" into 100 QTUM sizes [Reference 3].
 
 Download and install the current version Qtum Electrum wallet from [Qtum Electrum Releases](https://github.com/qtumproject/qtum-electrum/releases). Then complete sections 1 through 4 in the Appendix to sideload the Qtum App into Ledger and setup with the Qtum Electrum wallet.
 
@@ -61,11 +61,11 @@ To send the QRC20 tokens, on the Electrum Tokens page, right-click the desired t
 
 
 
-* Security Note
+# Security Note
 
 Hardware wallets provide some of the best security for cryptocurrency wallets because they hold the private keys offline for signing transactions, and allow manual inspection and approval of transactions on the hardware device. This Qtum Ledger Loader solution maintains the full security of the hardware wallet and does not export private keys. The Qtum App for Ledger Nano S has been developed by the Qtum core developers and submitted to Ledger for review and incorporation for sideloading through their official Ledger Live wallet, but priorities and resources at Ledger have delayed availability, so Qtum is providing this direct approach.
 
-# Appendix – Installation Steps
+# Appendix â€“ Installation Steps
 
 ## 1. Install Python
 
@@ -128,7 +128,7 @@ On the Ledger scroll right past the initial "Deny" screen, keep scrolling right 
 
 
 
-The Installer will say "Confirm Qtum install on your Ledger device…"
+The Installer will say "Confirm Qtum install on your Ledger deviceâ€¦"
 
 On the Ledger scroll right to see the public key again (9 screens) and select "Allow unsafe manager", and the App will load.
 
