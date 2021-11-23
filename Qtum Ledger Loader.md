@@ -21,11 +21,11 @@ Download and install the current version Qtum Electrum wallet from [Qtum Electru
 
 2. Launch Qtum Electrum and select to use hardware device, Ledger in the setup:
 
-
+three image
 
 On the Electrum View menu select "Show Delegations", then on the Delegation page right-click to add an address delegation. Click the Address drop-down and select the address to be delegated, enter the Staker address (a list of super stakers is available at [Super staker list](https://stake-a-thon.qtum.org/en/super-staker/list), Fee Percent, use the default fees, and click "Add". 
 
-
+![4  Address Delegation with Side Panels](https://user-images.githubusercontent.com/29760787/142962609-4b16b4a6-5e69-4d90-a282-efdcef886d6a.jpg)
 
 Confirm the address delegation on the Ledger, scrolling right and selecting "Sign message"
 
